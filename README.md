@@ -1,1 +1,1 @@
-is for learing C language
+that is for learing C language
