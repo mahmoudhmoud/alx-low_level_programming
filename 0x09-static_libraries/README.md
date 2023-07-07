@@ -1,0 +1,1 @@
+is fore Static libraries
