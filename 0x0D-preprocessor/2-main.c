@@ -1,8 +1,17 @@
-#ifndef _PI_H
-#define _PI_H
+#include <stdio.h>
 
 
-#define PI 3.14159265359
+/**
+ * main - print name off this source file
+ *
+ * Return: Always 0.
+ */
 
 
-#endif /* _PI_H */
+int main(void)
+{
+
+	printf("%s\n", __FILE__);
+	return (0);
+
+}
