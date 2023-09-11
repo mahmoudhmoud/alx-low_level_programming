@@ -3,12 +3,12 @@
 
 
 /**
- * struct Dog - a dog strucct
+ * struct Dog - a dog struct
  * @name: Dog's name
  * @age: Dog's age
  * @owner: Owner's name
  *
- * Description: Just a  lone dog struct in a big kitty world
+ * Description: Just a  loone dog struct in a big kitty world
  */
 
 
