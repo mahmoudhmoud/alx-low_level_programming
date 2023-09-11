@@ -2,7 +2,7 @@
 #define _PI_H
 
 
-#define PI 3.141592653591
+#define PI 3.14159265359
 
 
 #endif /* _PI_H */
