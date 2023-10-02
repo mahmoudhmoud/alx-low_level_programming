@@ -4,7 +4,7 @@
 void print_osabi_more(Elf64_Ehdr h);
 
 /**
- * the print_magic - prints ELF magic bytes
+ * print_magic - prints  ELF magic bytes
  * @h: The ELF header  struct
  */
 
