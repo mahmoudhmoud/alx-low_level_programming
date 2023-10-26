@@ -30,13 +30,12 @@ int inception(char *s1, char *s2)
 
 	int ret = 0;
 
+	if (*s1 == 0)
+	return (0);
 	if (*s1 == *s2)
 		ret += wildcmp(s1 + 1, s2 + 1);
 	ret += inception(s1 + 1, s2);
 	return (ret);
-
-	if (*s1 == 0)
-	return (0);
 
 }
 
