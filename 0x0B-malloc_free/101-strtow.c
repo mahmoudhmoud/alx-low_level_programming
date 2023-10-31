@@ -2,58 +2,83 @@
 
 
 /**
- * _strlen - find length dyal string
- * @s:  string
- * Return:  int
+ * wrdcnt - counts the number dlklam f string
+ * @s: string bach count
+ *
+ * Return: int dyal number dyal laklam
  */
 
 
-int _strlen(char *s)
+int wrdcnt(char *s)
+
 {
 
-	int size = 0;
+	int i, n = 0;
 
-	for (; s[size] != '\0'; size++)
-	;
-	return (size);
+	for (i = 0; s[i]; i++)
+	{
+		if (s[i] == ' ')
+		{
+			if (s[i + 1] != ' ' && s[i + 1] != '\0')
+				n++;
+		}
+		else if (i == 0)
+			n++;
+	}
+	n++;
+	return (n);
 
 }
 
 
 /**
- * *argstostr - charh
- * @ac:  int
- * @av:  arguments
- * Return:  string
+ * strtow - splits a string fklam
+ * @str: string bach split
+ *
+ * Return: pointer to an array dyal strings
  */
 
 
-char *argstostr(int ac, char **av)
+char **strtow(char *str)
 {
+	int i, j, k, l, n = 0, wc = 0;
+	char **w;
 
-	int i = 0, nc = 0, j = 0, cmpt = 0;
-	char *s;
-
-	if (ac == 0 || av == NULL)
+	if (str == NULL || *str == '\0')
 		return (NULL);
-
-	for (; i < ac; i++, nc++)
-		nc += _strlen(av[i]);
-
-	s = malloc(sizeof(char) * nc + 1);
-	if (s == 0)
+	n = wrdcnt(str);
+	if (n == 1)
 		return (NULL);
-
-	for (i = 0; i < ac; i++)
+	w = (char **)malloc(n * sizeof(char *));
+	if (w == NULL)
+		return (NULL);
+	w[n - 1] = NULL;
+	i = 0;
+	while (str[i])
 	{
-		for (j = 0; av[i][j] != '\0'; j++, cmpt++)
-			s[cmpt] = av[i][j];
-
-		s[cmpt] = '\n';
-
-		cmpt++;
+		if (str[i] != ' ' && (i == 0 || str[i - 1] == ' '))
+		{
+			for (j = 1; str[i + j] != ' ' && str[i + j]; j++)
+				;
+			j++;
+			w[wc] = (char *)malloc(j * sizeof(char));
+			j--;
+			if (w[wc] == NULL)
+			{
+				for (k = 0; k < wc; k++)
+					free(w[k]);
+				free(w[n - 1]);
+				free(w);
+				return (NULL);
+			}
+			for (l = 0; l < j; l++)
+				w[wc][l] = str[i + l];
+			w[wc][l] = '\0';
+			wc++;
+			i += j;
+		}
+		else
+			i++;
 	}
-	s[cmpt] = '\0';
-	return (s);
-
+	return (w);
 }
