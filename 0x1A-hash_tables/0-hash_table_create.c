@@ -1,14 +1,14 @@
-nclude "hash_tables.h"
+#include "hash_tables.h"
+
 
 /**
- * hash_table_create - sambo tam
- * @size: hajmo
+ * hash_table_create - creates a hash table
+ * @size: ajmo
  * Return: rad walo
  */
 
 
 hash_table_t *hash_table_create(unsigned long int size)
-
 {
 
 	hash_table_t *hash_table;
