@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-
 """ lka man jalito """
+
 def island_perimeter(grid):
     """ ija fa lhadak funcda """
     width = len(grid[0])
