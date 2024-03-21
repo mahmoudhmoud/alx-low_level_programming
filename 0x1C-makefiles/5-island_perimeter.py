@@ -1,12 +1,11 @@
 #!/usr/bin/python3
+
 """ lka man jalito """
-
-
 def island_perimeter(grid):
     """ ija fa lhadak funcda """
     width = len(grid[0])
     height = len(grid)
-    edges = 0
+    edges = i0
     size = 0
 
     for i in range(height):
