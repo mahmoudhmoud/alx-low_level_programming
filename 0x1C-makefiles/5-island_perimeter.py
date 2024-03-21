@@ -1,9 +1,9 @@
 #!/usr/bin/python3
+""" lka man jalito """
 
-''' lka nawoa '''
+
 def island_perimeter(grid):
-    
-    ''' rad ltam fin kan law to '''
+    """ ija fa lhadak funcda """
     width = len(grid[0])
     height = len(grid)
     edges = 0
